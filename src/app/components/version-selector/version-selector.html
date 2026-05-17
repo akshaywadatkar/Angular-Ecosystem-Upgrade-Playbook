@@ -1,0 +1,50 @@
+<div class="version-selector">
+  <div class="selector-group">
+    <label for="from-version" class="selector-label">
+      <span class="label-badge from">FROM</span>
+      Current Version
+    </label>
+    <div class="select-wrapper">
+      <select
+        id="from-version"
+        class="version-select"
+        [ngModel]="fromVersion()"
+        (ngModelChange)="onFromChange($event)"
+      >
+        <option [ngValue]="null" disabled>Select version...</option>
+        @for (v of allVersions; track v) {
+          <option [value]="v">Angular {{ v }}</option>
+        }
+      </select>
+      <span class="select-arrow">▾</span>
+    </div>
+  </div>
+
+  <div class="arrow-divider">
+    <div class="arrow-line"></div>
+    <span class="arrow-icon">→</span>
+    <div class="arrow-line"></div>
+  </div>
+
+  <div class="selector-group">
+    <label for="to-version" class="selector-label">
+      <span class="label-badge to">TO</span>
+      Target Version
+    </label>
+    <div class="select-wrapper">
+      <select
+        id="to-version"
+        class="version-select"
+        [ngModel]="toVersion()"
+        (ngModelChange)="onToChange($event)"
+        [disabled]="fromVersion() === null"
+      >
+        <option [ngValue]="null" disabled>Select version...</option>
+        @for (v of toVersions(); track v) {
+          <option [value]="v">Angular {{ v }}</option>
+        }
+      </select>
+      <span class="select-arrow">▾</span>
+    </div>
+  </div>
+</div>

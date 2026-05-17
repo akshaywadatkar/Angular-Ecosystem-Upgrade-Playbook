@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+// ─── Design Tokens ────────────────────────────────────────────────────────────
+
+:root {
+  // Colors
+  --accent-blue:   #4f8ef7;
+  --accent-blue-rgb: 79, 142, 247;
+  --accent-green:  #3ddb8b;
+  --accent-green-rgb: 61, 219, 139;
+  --accent-amber:  #f5a623;
+  --accent-amber-rgb: 245, 166, 35;
+  --accent-pink:   #e879a0;
+  --accent-pink-rgb: 232, 121, 160;
+  --accent-purple: #a78bfa;
+  --accent-purple-rgb: 167, 139, 250;
+  --accent-cyan:   #22d3ee;
+  --accent-cyan-rgb: 34, 211, 238;
+
+  // Fonts
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+// ─── Dark Mode (Default) ──────────────────────────────────────────────────────
+
+[data-theme='dark'] {
+  --bg:           #0d0f14;
+  --surface-0:    #111318;
+  --surface-1:    #161a22;
+  --surface-2:    #1d2230;
+  --surface-3:    #232a3a;
+  --border:       #2a3347;
+  --text-primary: #e8ecf4;
+  --text-secondary: #9aa4be;
+  --text-muted:   #5c6a87;
+  --code-text:    #a5d6ff;
+  --scrollbar:    #2a3347;
+}
+
+// ─── Light Mode ───────────────────────────────────────────────────────────────
+
+[data-theme='light'] {
+  --bg:           #f4f6fb;
+  --surface-0:    #ffffff;
+  --surface-1:    #f8fafd;
+  --surface-2:    #eef2f9;
+  --surface-3:    #e4eaf5;
+  --border:       #d0daea;
+  --text-primary: #0f1623;
+  --text-secondary: #3d4f6e;
+  --text-muted:   #7a8ca8;
+  --code-text:    #1e5fad;
+  --scrollbar:    #c8d4e8;
+}
+
+// ─── Base Reset ───────────────────────────────────────────────────────────────
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: 3px;
+}

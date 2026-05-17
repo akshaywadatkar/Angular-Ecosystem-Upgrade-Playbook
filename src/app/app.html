@@ -1,0 +1,100 @@
+<div class="app-shell">
+
+  <!-- ── Top Bar ─────────────────────────────────────────────── -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-icon">⬡</span>
+        <div class="brand-text">
+          <span class="brand-name">ng-upgrade</span>
+          <span class="brand-tagline">Angular Ecosystem Upgrade Playbook</span>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <a
+          href="https://update.angular.io"
+          target="_blank"
+          rel="noopener"
+          class="topbar-link"
+          id="angular-update-link"
+        >Official Update Guide ↗</a>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          (click)="toggleTheme()"
+          [title]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
+          type="button"
+        >
+          {{ isDarkMode() ? '☀' : '🌙' }}
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main Content ─────────────────────────────────────────── -->
+  <main class="main-content">
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-label">Phase-by-phase · Command-ready · No fluff</div>
+      <h1 class="hero-title">Generate Your Angular<br>Upgrade Playbook</h1>
+      <p class="hero-subtitle">
+        Select your current and target Angular version, pick the packages you use,
+        and get a step-by-step upgrade runbook — instantly.
+      </p>
+    </section>
+
+    <!-- Version Selector Card -->
+    <section class="card selector-card" id="version-selector-section">
+      <div class="card-header">
+        <span class="step-badge">1</span>
+        <span class="card-title">Select Versions</span>
+      </div>
+      <div class="card-body">
+        <app-version-selector
+          (fromVersionChange)="onFromVersionChange($event)"
+          (toVersionChange)="onToVersionChange($event)"
+        />
+      </div>
+    </section>
+
+    <!-- Package Selector + Output (only when both versions chosen) -->
+    @if (showContent) {
+      <section class="card selector-card" id="package-selector-section">
+        <div class="card-header">
+          <span class="step-badge">2</span>
+          <span class="card-title">Select Packages</span>
+        </div>
+        <div class="card-body">
+          <app-package-selector (selectedChange)="onPackagesChange($event)" />
+        </div>
+      </section>
+
+      <section class="card output-card" id="playbook-output-section">
+        <div class="card-header">
+          <span class="step-badge">3</span>
+          <span class="card-title">Your Playbook</span>
+          <span class="version-journey">
+            Angular {{ fromVersion() }} <span class="journey-arrow">⟶</span> Angular {{ toVersion() }}
+          </span>
+        </div>
+        <div class="card-body">
+          <app-playbook-output
+            [fromVersion]="fromVersion()!"
+            [toVersion]="toVersion()!"
+            [selectedPackageIds]="selectedPackageIds()"
+          />
+        </div>
+      </section>
+    }
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>Built for Angular developers · Data updated for Angular 21</span>
+    <span class="footer-sep">·</span>
+    <a href="https://angular.dev" target="_blank" rel="noopener">angular.dev</a>
+  </footer>
+
+</div>

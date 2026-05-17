@@ -1,0 +1,131 @@
+.version-selector {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selector-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.selector-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.label-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  &.from {
+    background: rgba(var(--accent-blue-rgb), 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(var(--accent-blue-rgb), 0.3);
+  }
+
+  &.to {
+    background: rgba(var(--accent-green-rgb), 0.15);
+    color: var(--accent-green);
+    border: 1px solid rgba(var(--accent-green-rgb), 0.3);
+  }
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.version-select {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(var(--accent-blue-rgb), 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  option {
+    background: var(--surface-2);
+    color: var(--text-primary);
+  }
+}
+
+.select-arrow {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.arrow-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.6rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+
+  .arrow-line {
+    width: 24px;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .arrow-icon {
+    font-size: 1.25rem;
+    color: var(--accent-blue);
+  }
+}
+
+@media (max-width: 600px) {
+  .version-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selector-group {
+    max-width: 100%;
+  }
+
+  .arrow-divider {
+    justify-content: center;
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}

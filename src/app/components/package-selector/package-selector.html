@@ -1,0 +1,43 @@
+<div class="package-selector">
+  <div class="section-header">
+    <h2 class="section-title">
+      <span class="title-icon">📦</span>
+      Packages in Your Project
+    </h2>
+    <p class="section-subtitle">Select the optional packages you use — core packages are always included</p>
+  </div>
+
+  <div class="core-packages">
+    <div class="group-label">Always included</div>
+    <div class="chips-row">
+      @for (pkg of corePackages; track pkg) {
+        <span class="chip chip-core">
+          <span class="chip-dot"></span>
+          {{ pkg }}
+        </span>
+      }
+    </div>
+  </div>
+
+  <div class="optional-packages">
+    @for (group of packageGroups; track group.label) {
+      <div class="package-group">
+        <div class="group-label">{{ group.label }}</div>
+        <div class="chips-row">
+          @for (pkg of group.packages; track pkg.id) {
+            <button
+              class="chip chip-optional"
+              [class.selected]="isSelected(pkg.id)"
+              [id]="'pkg-' + pkg.id"
+              (click)="toggle(pkg)"
+              type="button"
+            >
+              <span class="chip-check">{{ isSelected(pkg.id) ? '✓' : '+' }}</span>
+              {{ pkg.label }}
+            </button>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="playbook-output">
+  <div class="output-header">
+    <div class="output-title-group">
+      <h2 class="output-title">
+        <span class="title-icon">🚀</span>
+        Upgrade Playbook
+      </h2>
+      <span class="phase-count">{{ phases().length }} phase{{ phases().length !== 1 ? 's' : '' }}</span>
+    </div>
+    <button
+      id="copy-all-btn"
+      class="btn btn-copy-all"
+      (click)="copyAll()"
+      type="button"
+    >
+      <span class="btn-icon">{{ copiedAll ? '✓' : '⎘' }}</span>
+      {{ copiedAll ? 'Copied!' : 'Copy All' }}
+    </button>
+  </div>
+
+  @if (phases().length > 3) {
+    <div class="multi-phase-notice">
+      <span class="notice-icon">ℹ</span>
+      Long jump detected — always upgrade one major version at a time. Each phase below represents a single major step.
+    </div>
+  }
+
+  <div class="phases-list">
+    @for (phase of phases(); track phase.from; let i = $index) {
+      <div class="phase-card" [style.--phase-color]="phaseColor(i)">
+        <div class="phase-card-border"></div>
+
+        <div class="phase-header">
+          <div class="phase-badge">
+            <span class="phase-num">Phase {{ i + 1 }}</span>
+            <span class="phase-arrow">Angular {{ phase.from }} → {{ phase.to }}</span>
+          </div>
+
+          <button
+            class="btn btn-copy-phase"
+            [id]="'copy-phase-' + i"
+            (click)="copyPhase(i, phase.fullText)"
+            type="button"
+          >
+            <span>{{ copiedPhase === i ? '✓ Copied' : '⎘ Copy' }}</span>
+          </button>
+        </div>
+
+        <div class="phase-meta">
+          @if (phase.nodeChanged) {
+            <div class="node-warning">
+              <span class="warning-icon">⚠</span>
+              <strong>Node.js version change!</strong> Required: <code>{{ phase.nodeRequirement }}</code>
+            </div>
+          } @else {
+            <div class="node-info">
+              <span class="info-icon">🔵</span>
+              Node.js: <code>{{ phase.nodeRequirement }}</code>
+            </div>
+          }
+        </div>
+
+        <div class="code-block-wrapper">
+          <div class="code-block-label">Core Upgrade</div>
+          <pre class="code-block"><code>{{ phase.coreCommand }}</code></pre>
+        </div>
+
+        @if (phase.packageCommands.length > 0) {
+          <div class="code-block-wrapper">
+            <div class="code-block-label">Third-Party Packages</div>
+            <pre class="code-block"><code>{{ phase.packageCommands.join('\n') }}</code></pre>
+          </div>
+        }
+
+        @if (phase.gotchas.length > 0) {
+          <div class="gotchas-block">
+            <div class="gotchas-header">
+              <span class="gotchas-icon">⚠️</span>
+              Gotchas for this phase
+            </div>
+            <ul class="gotchas-list">
+              @for (g of phase.gotchas; track g) {
+                <li class="gotcha-item">{{ g }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  @if (phases()[0]?.globalGotchas?.length) {
+    <div class="global-gotchas">
+      <div class="gotchas-header">
+        <span class="gotchas-icon">🌐</span>
+        Global Gotchas (apply to all versions)
+      </div>
+      <ul class="gotchas-list">
+        @for (g of phases()[0].globalGotchas; track g) {
+          <li class="gotcha-item">{{ g }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

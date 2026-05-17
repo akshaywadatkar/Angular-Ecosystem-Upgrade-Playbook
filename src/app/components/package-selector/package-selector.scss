@@ -1,0 +1,118 @@
+.package-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+
+  .title-icon {
+    font-size: 1.1rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+  padding-left: 1.6rem;
+}
+
+.core-packages,
+.optional-packages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.package-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-left: 0.25rem;
+}
+
+.chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.chip-core {
+  background: rgba(var(--accent-blue-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-blue-rgb), 0.2);
+  color: var(--text-muted);
+
+  .chip-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+}
+
+.chip-optional {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+
+  .chip-check {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    width: 12px;
+    display: inline-block;
+    text-align: center;
+    transition: color 0.15s;
+  }
+
+  &:hover {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+  }
+
+  &.selected {
+    background: rgba(var(--accent-green-rgb), 0.1);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+
+    .chip-check {
+      color: var(--accent-green);
+    }
+  }
+}
