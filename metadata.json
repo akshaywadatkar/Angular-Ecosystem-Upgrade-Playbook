@@ -1,0 +1,16 @@
+{
+  "id": "ng-upgrade-playbook",
+  "title": "Angular Ecosystem Upgrade Playbook — Project Overview",
+  "summary": "A fully static Angular 21 SPA that generates phase-by-phase upgrade playbooks for Angular projects. No backend. Uses standalone components, Angular Signals, SCSS, and Angular CDK Clipboard. Located at /Users/akshay/personal/update.",
+  "created": "2026-05-17",
+  "lastModified": "2026-05-17",
+  "workspace": "/Users/akshay/personal/update",
+  "corpus": "akshaywadatkar/Angular-Ecosystem-Upgrade-Playbook",
+  "conversationId": "71528eb7-26f8-4352-a8a0-ba5dcdd67d75",
+  "tags": ["angular", "upgrade", "playbook", "signals", "standalone", "static"],
+  "references": [
+    "/Users/akshay/personal/update/package.json",
+    "/Users/akshay/personal/update/src/app/data/version-data.ts",
+    "/Users/akshay/personal/update/src/app/models/version.model.ts"
+  ]
+}

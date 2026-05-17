@@ -80,6 +80,42 @@
   }
 }
 
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.15s;
+
+  &:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+    background: var(--surface-3);
+  }
+
+  .github-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .github-label {
+    @media (max-width: 540px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
+}
+
 .theme-toggle {
   width: 36px;
   height: 36px;

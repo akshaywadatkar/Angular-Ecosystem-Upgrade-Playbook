@@ -20,22 +20,22 @@ export const ANGULAR_CORE_MATRIX: Record<number, CoreVersionInfo> = {
 };
 
 export const PACKAGE_MATRIX: Record<number, Record<string, string>> = {
-  6:  { material: '6.x',  'ng-bootstrap': '3.x',  'ngx-bootstrap': '3.x',  primeng: '6.x',  ngrx: '5.x',  'ng-select': '2.x',  'ngx-toastr': '10.x', 'ngx-translate': '10.x', ionic: '4.x',  capacitor: '-',   aggrid: '-'    },
-  7:  { material: '7.x',  'ng-bootstrap': '4.x',  'ngx-bootstrap': '4.x',  primeng: '7.x',  ngrx: '6.x',  'ng-select': '3.x',  'ngx-toastr': '11.x', 'ngx-translate': '11.x', ionic: '4.x',  capacitor: '-',   aggrid: '-'    },
-  8:  { material: '8.x',  'ng-bootstrap': '5.x',  'ngx-bootstrap': '5.x',  primeng: '8.x',  ngrx: '8.x',  'ng-select': '3.x',  'ngx-toastr': '11.x', 'ngx-translate': '12.x', ionic: '5.x',  capacitor: '2.x', aggrid: '22.x' },
-  9:  { material: '9.x',  'ng-bootstrap': '6.x',  'ngx-bootstrap': '6.x',  primeng: '9.x',  ngrx: '9.x',  'ng-select': '5.x',  'ngx-toastr': '12.x', 'ngx-translate': '13.x', ionic: '5.x',  capacitor: '2.x', aggrid: '24.x' },
-  10: { material: '10.x', 'ng-bootstrap': '7.x',  'ngx-bootstrap': '6.x',  primeng: '10.x', ngrx: '9.x',  'ng-select': '6.x',  'ngx-toastr': '12.x', 'ngx-translate': '13.x', ionic: '5.x',  capacitor: '2.x', aggrid: '25.x' },
-  11: { material: '11.x', 'ng-bootstrap': '10.x', 'ngx-bootstrap': '6.x',  primeng: '11.x', ngrx: '10.x', 'ng-select': '7.x',  'ngx-toastr': '13.x', 'ngx-translate': '13.x', ionic: '5.x',  capacitor: '3.x', aggrid: '26.x' },
-  12: { material: '12.x', 'ng-bootstrap': '11.x', 'ngx-bootstrap': '7.x',  primeng: '12.x', ngrx: '12.x', 'ng-select': '8.x',  'ngx-toastr': '14.x', 'ngx-translate': '14.x', ionic: '6.x',  capacitor: '3.x', aggrid: '27.x' },
-  13: { material: '13.x', 'ng-bootstrap': '12.x', 'ngx-bootstrap': '8.x',  primeng: '13.x', ngrx: '13.x', 'ng-select': '9.x',  'ngx-toastr': '14.x', 'ngx-translate': '14.x', ionic: '6.x',  capacitor: '3.x', aggrid: '28.x' },
-  14: { material: '14.x', 'ng-bootstrap': '13.x', 'ngx-bootstrap': '9.x',  primeng: '14.x', ngrx: '14.x', 'ng-select': '9.x',  'ngx-toastr': '15.x', 'ngx-translate': '14.x', ionic: '7.x',  capacitor: '4.x', aggrid: '29.x' },
-  15: { material: '15.x', 'ng-bootstrap': '14.x', 'ngx-bootstrap': '10.x', primeng: '15.x', ngrx: '15.x', 'ng-select': '10.x', 'ngx-toastr': '16.x', 'ngx-translate': '15.x', ionic: '7.x',  capacitor: '5.x', aggrid: '30.x' },
-  16: { material: '16.x', 'ng-bootstrap': '15.x', 'ngx-bootstrap': '11.x', primeng: '16.x', ngrx: '16.x', 'ng-select': '11.x', 'ngx-toastr': '17.x', 'ngx-translate': '15.x', ionic: '8.x',  capacitor: '5.x', aggrid: '31.x' },
-  17: { material: '17.x', 'ng-bootstrap': '16.x', 'ngx-bootstrap': '12.x', primeng: '17.x', ngrx: '17.x', 'ng-select': '12.x', 'ngx-toastr': '19.x', 'ngx-translate': '16.x', ionic: '8.x',  capacitor: '6.x', aggrid: '32.x' },
-  18: { material: '18.x', 'ng-bootstrap': '17.x', 'ngx-bootstrap': '13.x', primeng: '18.x', ngrx: '18.x', 'ng-select': '13.x', 'ngx-toastr': '19.x', 'ngx-translate': '16.x', ionic: '8.x',  capacitor: '7.x', aggrid: '32.x' },
-  19: { material: '19.x', 'ng-bootstrap': '18.x', 'ngx-bootstrap': '14.x', primeng: '19.x', ngrx: '19.x', 'ng-select': '14.x', 'ngx-toastr': '20.x', 'ngx-translate': '17.x', ionic: '8.x',  capacitor: '7.x', aggrid: '33.x' },
-  20: { material: '20.x', 'ng-bootstrap': '19.x', 'ngx-bootstrap': '15.x', primeng: '20.x', ngrx: '20.x', 'ng-select': '15.x', 'ngx-toastr': '20.x', 'ngx-translate': '17.x', ionic: '8.x',  capacitor: '8.x', aggrid: '33.x' },
-  21: { material: '21.x', 'ng-bootstrap': '19.x', 'ngx-bootstrap': '16.x', primeng: '21.x', ngrx: '21.x', 'ng-select': '15.x', 'ngx-toastr': '20.x', 'ngx-translate': '17.x', ionic: '8.x',  capacitor: '8.x', aggrid: '33.x' },
+  6:  { material: '6.x',  'ng-bootstrap': '3.x',  'ngx-bootstrap': '3.x',  primeng: '6.x',  ngrx: '5.x',  'ng-select': '2.x',  'ngx-toastr': '10.x', 'ngx-translate': '10.x', ionic: '4.x',  capacitor: '-',   aggrid: '-',    'ngx-spinner': '5.x',  sweetalert2: '8.x'  },
+  7:  { material: '7.x',  'ng-bootstrap': '4.x',  'ngx-bootstrap': '4.x',  primeng: '7.x',  ngrx: '6.x',  'ng-select': '3.x',  'ngx-toastr': '11.x', 'ngx-translate': '11.x', ionic: '4.x',  capacitor: '-',   aggrid: '-',    'ngx-spinner': '6.x',  sweetalert2: '8.x'  },
+  8:  { material: '8.x',  'ng-bootstrap': '5.x',  'ngx-bootstrap': '5.x',  primeng: '8.x',  ngrx: '8.x',  'ng-select': '3.x',  'ngx-toastr': '11.x', 'ngx-translate': '12.x', ionic: '5.x',  capacitor: '2.x', aggrid: '22.x', 'ngx-spinner': '7.x',  sweetalert2: '9.x'  },
+  9:  { material: '9.x',  'ng-bootstrap': '6.x',  'ngx-bootstrap': '6.x',  primeng: '9.x',  ngrx: '9.x',  'ng-select': '5.x',  'ngx-toastr': '12.x', 'ngx-translate': '13.x', ionic: '5.x',  capacitor: '2.x', aggrid: '24.x', 'ngx-spinner': '8.x',  sweetalert2: '9.x'  },
+  10: { material: '10.x', 'ng-bootstrap': '7.x',  'ngx-bootstrap': '6.x',  primeng: '10.x', ngrx: '9.x',  'ng-select': '6.x',  'ngx-toastr': '12.x', 'ngx-translate': '13.x', ionic: '5.x',  capacitor: '2.x', aggrid: '25.x', 'ngx-spinner': '9.x',  sweetalert2: '10.x' },
+  11: { material: '11.x', 'ng-bootstrap': '10.x', 'ngx-bootstrap': '6.x',  primeng: '11.x', ngrx: '10.x', 'ng-select': '7.x',  'ngx-toastr': '13.x', 'ngx-translate': '13.x', ionic: '5.x',  capacitor: '3.x', aggrid: '26.x', 'ngx-spinner': '10.x', sweetalert2: '10.x' },
+  12: { material: '12.x', 'ng-bootstrap': '11.x', 'ngx-bootstrap': '7.x',  primeng: '12.x', ngrx: '12.x', 'ng-select': '8.x',  'ngx-toastr': '14.x', 'ngx-translate': '14.x', ionic: '6.x',  capacitor: '3.x', aggrid: '27.x', 'ngx-spinner': '11.x', sweetalert2: '11.x' },
+  13: { material: '13.x', 'ng-bootstrap': '12.x', 'ngx-bootstrap': '8.x',  primeng: '13.x', ngrx: '13.x', 'ng-select': '9.x',  'ngx-toastr': '14.x', 'ngx-translate': '14.x', ionic: '6.x',  capacitor: '3.x', aggrid: '28.x', 'ngx-spinner': '12.x', sweetalert2: '11.x' },
+  14: { material: '14.x', 'ng-bootstrap': '13.x', 'ngx-bootstrap': '9.x',  primeng: '14.x', ngrx: '14.x', 'ng-select': '9.x',  'ngx-toastr': '15.x', 'ngx-translate': '14.x', ionic: '7.x',  capacitor: '4.x', aggrid: '29.x', 'ngx-spinner': '13.x', sweetalert2: '11.x' },
+  15: { material: '15.x', 'ng-bootstrap': '14.x', 'ngx-bootstrap': '10.x', primeng: '15.x', ngrx: '15.x', 'ng-select': '10.x', 'ngx-toastr': '16.x', 'ngx-translate': '15.x', ionic: '7.x',  capacitor: '5.x', aggrid: '30.x', 'ngx-spinner': '14.x', sweetalert2: '11.x' },
+  16: { material: '16.x', 'ng-bootstrap': '15.x', 'ngx-bootstrap': '11.x', primeng: '16.x', ngrx: '16.x', 'ng-select': '11.x', 'ngx-toastr': '17.x', 'ngx-translate': '15.x', ionic: '8.x',  capacitor: '5.x', aggrid: '31.x', 'ngx-spinner': '15.x', sweetalert2: '11.x' },
+  17: { material: '17.x', 'ng-bootstrap': '16.x', 'ngx-bootstrap': '12.x', primeng: '17.x', ngrx: '17.x', 'ng-select': '12.x', 'ngx-toastr': '19.x', 'ngx-translate': '16.x', ionic: '8.x',  capacitor: '6.x', aggrid: '32.x', 'ngx-spinner': '16.x', sweetalert2: '11.x' },
+  18: { material: '18.x', 'ng-bootstrap': '17.x', 'ngx-bootstrap': '13.x', primeng: '18.x', ngrx: '18.x', 'ng-select': '13.x', 'ngx-toastr': '19.x', 'ngx-translate': '16.x', ionic: '8.x',  capacitor: '7.x', aggrid: '32.x', 'ngx-spinner': '17.x', sweetalert2: '11.x' },
+  19: { material: '19.x', 'ng-bootstrap': '18.x', 'ngx-bootstrap': '14.x', primeng: '19.x', ngrx: '19.x', 'ng-select': '14.x', 'ngx-toastr': '20.x', 'ngx-translate': '17.x', ionic: '8.x',  capacitor: '7.x', aggrid: '33.x', 'ngx-spinner': '17.x', sweetalert2: '11.x' },
+  20: { material: '20.x', 'ng-bootstrap': '19.x', 'ngx-bootstrap': '15.x', primeng: '20.x', ngrx: '20.x', 'ng-select': '15.x', 'ngx-toastr': '20.x', 'ngx-translate': '17.x', ionic: '8.x',  capacitor: '8.x', aggrid: '33.x', 'ngx-spinner': '17.x', sweetalert2: '11.x' },
+  21: { material: '21.x', 'ng-bootstrap': '19.x', 'ngx-bootstrap': '16.x', primeng: '21.x', ngrx: '21.x', 'ng-select': '15.x', 'ngx-toastr': '20.x', 'ngx-translate': '17.x', ionic: '8.x',  capacitor: '8.x', aggrid: '33.x', 'ngx-spinner': '17.x', sweetalert2: '11.x' },
 };
 
 export const GOTCHAS: Record<string, string[]> = {
@@ -92,7 +92,14 @@ export const PACKAGE_GROUPS: PackageGroup[] = [
   {
     label: 'Notifications',
     packages: [
-      { id: 'ngx-toastr',     label: 'ngx-toastr',                 packageName: 'ngx-toastr',                 matrixKey: 'ngx-toastr',    optional: true },
+      { id: 'ngx-toastr',    label: 'ngx-toastr',    packageName: 'ngx-toastr',    matrixKey: 'ngx-toastr',    optional: true },
+      { id: 'sweetalert2',   label: 'sweetalert2',   packageName: 'sweetalert2',   matrixKey: 'sweetalert2',   optional: true },
+    ],
+  },
+  {
+    label: 'Loaders',
+    packages: [
+      { id: 'ngx-spinner',   label: 'ngx-spinner',   packageName: 'ngx-spinner',   matrixKey: 'ngx-spinner',   optional: true },
     ],
   },
   {
