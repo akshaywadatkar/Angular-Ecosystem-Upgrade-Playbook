@@ -17,7 +17,7 @@ export class App implements OnInit {
   fromVersion = signal<number | null>(null);
   toVersion = signal<number | null>(null);
   selectedPackageIds = signal<string[]>([]);
-  isDarkMode = signal(true);
+  isDarkMode = signal(false);
 
   get showContent(): boolean {
     return this.fromVersion() !== null && this.toVersion() !== null;
